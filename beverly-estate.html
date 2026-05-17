@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxury Property</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #0f0f0f;
+      color: white;
+    }
+
+    .title {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+      <h1 class="title text-2xl text-yellow-400">
+        ESTATE GOLD
+      </h1>
+
+      <a href="index.html"
+        class="bg-yellow-400 text-black px-5 py-2 font-semibold rounded-lg hover:bg-yellow-300 transition">
+        Back
+      </a>
+
+    </div>
+  </header>
+
+# Beverly Hills Modern Estate Version
+
+Use this content to create a separate `beverly-estate.html` page.
+
+```html
+<!-- Replace Hero Section -->
+<section class="relative h-screen">
+
+  <img
+    src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1400"
+    class="w-full h-full object-cover"
+  />
+
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <div class="absolute bottom-16 left-10 z-10">
+
+    <p class="uppercase tracking-[4px] text-yellow-400 mb-3">
+      Beverly Hills, California
+    </p>
+
+    <h1 class="title text-6xl md:text-7xl mb-4">
+      Modern Estate
+    </h1>
+
+    <p class="text-2xl font-semibold">
+      $55,000,000
+    </p>
+
+  </div>
+
+</section>
+
+<!-- Replace Property Overview -->
+<p class="text-gray-300 leading-8 text-lg mb-10">
+  This extraordinary modern estate in Beverly Hills combines architectural brilliance with unmatched luxury.
+  Featuring panoramic city views, cinematic interiors, private wellness spa, luxury wine cellar,
+  smart automation system, home theater, infinity-edge pool, and ultra-premium finishes throughout.
+</p>
+
+<!-- Replace Features -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+
+  <div class="bg-[#1a1a1a] p-6 rounded-xl text-center">
+    <h3 class="text-yellow-400 text-3xl font-bold mb-2">8</h3>
+    <p class="text-gray-400">Bedrooms</p>
+  </div>
+
+  <div class="bg-[#1a1a1a] p-6 rounded-xl text-center">
+    <h3 class="text-yellow-400 text-3xl font-bold mb-2">10</h3>
+    <p class="text-gray-400">Bathrooms</p>
+  </div>
+
+  <div class="bg-[#1a1a1a] p-6 rounded-xl text-center">
+    <h3 class="text-yellow-400 text-3xl font-bold mb-2">20K</h3>
+    <p class="text-gray-400">Sqft</p>
+  </div>
+
+  <div class="bg-[#1a1a1a] p-6 rounded-xl text-center">
+    <h3 class="text-yellow-400 text-3xl font-bold mb-2">3</h3>
+    <p class="text-gray-400">Garages</p>
+  </div>
+
+</div>
+
+<!-- Replace Gallery -->
+<div class="grid md:grid-cols-2 gap-6">
+
+  <img
+    src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200"
+    class="rounded-2xl h-80 w-full object-cover"
+  />
+
+  <img
+    src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=1200"
+    class="rounded-2xl h-80 w-full object-cover"
+  />
+
+  <img
+    src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=80&w=1200"
+    class="rounded-2xl h-80 w-full object-cover"
+  />
+
+  <img
+    src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200"
+    class="rounded-2xl h-80 w-full object-cover"
+  />
+
+</div>
+
+
+
+    <!-- Right Side -->
+    <div>
+
+      <div class="bg-[#1a1a1a] p-8 rounded-2xl sticky top-24">
+
+        <h2 class="title text-3xl mb-6">
+          Enquire Now
+        </h2>
+
+        <form class="space-y-4">
+
+          <input
+            type="text"
+            placeholder="Full Name"
+            class="w-full p-4 rounded-lg bg-black border border-white/10"
+          />
+
+          <input
+            type="email"
+            placeholder="Email"
+            class="w-full p-4 rounded-lg bg-black border border-white/10"
+          />
+
+          <input
+            type="tel"
+            placeholder="Phone Number"
+            class="w-full p-4 rounded-lg bg-black border border-white/10"
+          />
+
+          <textarea
+            rows="5"
+            placeholder="Message"
+            class="w-full p-4 rounded-lg bg-black border border-white/10"></textarea>
+
+          <button
+            type="submit"
+            class="w-full bg-yellow-400 text-black py-4 rounded-lg font-semibold hover:bg-yellow-300 transition">
+            Submit Enquiry
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-8 text-center text-gray-500">
+    © 2024 ESTATE GOLD — Luxury Redefined
+  </footer>
+
+</body>
+</html>

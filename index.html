@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Estate Gold</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" >
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+      <h1 class="title text-2xl text-yellow-400">
+        ESTATE GOLD
+      </h1>
+
+      <nav class="hidden md:flex gap-8 text-sm tracking-widest">
+        <a href="#">HOME</a>
+        <a href="#">PORTFOLIO</a>
+        <a href="#">CONTACT</a>
+      </nav>
+
+     <button onclick="openModal()"
+  class="bg-yellow-400 text-black px-5 py-2 text-sm font-semibold hover:bg-yellow-300 transition">
+  ENQUIRE
+</button>
+
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero h-screen flex items-center justify-center text-center px-6">
+
+    <div>
+      <p class="uppercase tracking-[5px] text-yellow-400 mb-4">
+        Luxury Real Estate
+      </p>
+
+      <h2 class="title text-5xl md:text-7xl max-w-4xl mb-8">
+        Find Your Dream Property
+      </h2>
+
+      <!-- Search -->
+   <input
+  type="text"
+  id="searchLocation"
+  placeholder="Location"
+  class="flex-1 border p-3 rounded mr-4 text-black"
+/>
+
+<select
+  id="searchType"
+  class="flex-1 border p-3 rounded text-black">
+
+  <option value="">All Types</option>
+  <option>Villa</option>
+  <option>Penthouse</option>
+  <option>Estate</option>
+
+</select>
+
+<button
+  onclick="searchProperties()"
+  class="bg-black text-white px-8 py-3 rounded">
+
+  Search
+
+</button>
+    </div>
+  </section>
+
+
+  
+
+  <!-- Featured Properties -->
+  <section class="py-24 px-6 max-w-7xl mx-auto">
+
+    <div class="flex justify-between items-center mb-12">
+      <h3 class="title text-4xl">Featured Properties</h3>
+
+      <a href="#" class="text-yellow-400">
+        View All
+      </a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Card -->
+      <div
+  class="property-card bg-[#1a1a1a] rounded-xl overflow-hidden"
+  data-location="Dubai"
+  data-type="Penthouse">
+        <img
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200"
+          class="h-72 w-full object-cover"
+        />
+
+        <div class="p-6">
+         
+          <p class="text-yellow-400 text-sm mb-2">
+            Dubai, UAE
+          </p>
+
+          <h4 class="text-2xl font-semibold mb-3">
+            Luxury Penthouse
+          </h4>
+
+          <p class="text-gray-400 mb-4">
+            5 Beds • 7 Baths • 12,000 sqft
+          </p>
+
+          <p class="text-2xl font-bold">
+            $18,500,000
+          </p>
+          <a href="dubai-penthouse.html"
+ class="inline-block mt-6 bg-yellow-400 text-black px-5 py-3 rounded-lg font-semibold">
+  View Details
+</a>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div
+  class="property-card bg-[#1a1a1a] rounded-xl overflow-hidden"
+  data-location="Monaco"
+  data-type="Villa">
+        <img
+          src="https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=1200"
+          class="h-72 w-full object-cover"
+        />
+
+        <div class="p-6">
+          <p class="text-yellow-400 text-sm mb-2">
+            Monaco
+          </p>
+
+          <h4 class="text-2xl font-semibold mb-3">
+            Ocean View Villa
+          </h4>
+
+          <p class="text-gray-400 mb-4">
+            7 Beds • 9 Baths • 18,000 sqft
+          </p>
+
+          <p class="text-2xl font-bold">
+            $42,000,000
+          </p>
+          <a href="monaco-villa.html"
+ class="inline-block mt-6 bg-yellow-400 text-black px-5 py-3 rounded-lg font-semibold">
+  View Details
+</a>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div
+  class="property-card bg-[#1a1a1a] rounded-xl overflow-hidden"
+  data-location="Beverly Hills"
+  data-type="Estate">
+        <img
+          src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200"
+          class="h-72 w-full object-cover"
+        />
+
+        <div class="p-6">
+          <p class="text-yellow-400 text-sm mb-2">
+            Beverly Hills
+          </p>
+
+          <h4 class="text-2xl font-semibold mb-3">
+            Modern Estate
+          </h4>
+
+          <p class="text-gray-400 mb-4">
+            8 Beds • 10 Baths • 20,000 sqft
+          </p>
+
+          <p class="text-2xl font-bold">
+            $55,000,000
+          </p>
+          <a href="beverly-estate.html"
+ class="inline-block mt-6 bg-yellow-400 text-black px-5 py-3 rounded-lg font-semibold">
+  View Details
+</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-8 text-center text-gray-400">
+    © 2024 ESTATE GOLD — Luxury Redefined
+  </footer>
+  
+
+  <!-- Modal -->
+<div id="enquireModal"
+  class="fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
+
+  <div class="bg-white w-[90%] max-w-xl rounded-2xl p-8 relative">
+
+    <!-- Close -->
+    <button onclick="closeModal()"
+      class="absolute top-4 right-4 text-3xl text-gray-500 hover:text-black">
+      &times;
+    </button>
+
+    <h2 class="text-3xl font-bold mb-6 text-center">
+      Luxury Enquiry
+    </h2>
+
+   <form id="enquiryForm" class="space-y-4">
+
+  <input
+    type="text"
+    id="Name"
+    placeholder="Full Name"
+    class="w-full border p-4 rounded-lg text-gray-500"
+    required
+  />
+
+  <input
+    type="email"
+    id="Email"
+    placeholder="Email Address"
+    class="w-full border p-4 rounded-lg text-gray-500"
+    required
+  />
+
+  <input
+    type="tel"
+    id="Phone"
+    placeholder="Phone Number"
+    class="w-full border p-4 rounded-lg text-gray-500"
+    required
+  />
+
+  <!-- Property -->
+  <select
+    id="Property"
+    class="w-full border p-4 rounded-lg text-gray-500"
+    required>
+
+    <option value="">Select Property</option>
+    <option>Luxury Villa</option>
+    <option>Penthouse</option>
+    <option>Modern Estate</option>
+    <option>Private Island</option>
+
+  </select>
+
+  <!-- Budget -->
+  <select
+    id="Budget"
+    class="w-full border p-4 rounded-lg text-gray-500"
+    required>
+
+    <option value="">Select Budget</option>
+    <option>$1M - $5M</option>
+    <option>$5M - $10M</option>
+    <option>$10M - $25M</option>
+    <option>$25M+</option>
+
+  </select>
+
+  <textarea
+    id="Message"
+    rows="4"
+    placeholder="Your Message"
+    class="w-full border p-4 rounded-lg text-black"
+    required></textarea>
+
+  <button
+    type="submit"
+    class="w-full bg-black text-white py-4 rounded-lg hover:bg-gray-800">
+    Submit Enquiry
+  </button>
+
+</form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
